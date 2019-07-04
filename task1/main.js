@@ -16,8 +16,8 @@ let appData = {
     savings: false
 };
 
-appData.expenses.expense1 = expense2;
-appData.expenses.expense3 = expense4;
+appData.expenses[expense1] = expense2;
+appData.expenses[expense3] = expense4;
 
 console.log(appData.moneyData);
 console.log(appData.timeData);
