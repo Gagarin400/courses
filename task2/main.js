@@ -26,7 +26,40 @@ for (let i = 0;i < 2;i++) {
     }
 }
 
-while ()
+// второй способ
+// let i = 0;
+
+// while (i < 2) {
+//     let a = prompt('Введите обязательную статью расходов в этом месяце'),
+//         b = +prompt('Во сколько обойдется?');
+
+//     if (typeof(a) === 'string' && typeof(a) != null && typeof(b) != null 
+//         && a != '' && b != '' && a.length < 50) {
+//         console.log('ok')
+//         appData.expenses[a] = b;
+//     } else {
+//         continue;
+//     }
+//     i++;
+// }
+
+// третий способ
+// let i = 0;
+
+// do {
+//     let a = prompt('Введите обязательную статью расходов в этом месяце'),
+//         b = +prompt('Во сколько обойдется?');
+
+//     if (typeof(a) === 'string' && typeof(a) != null && typeof(b) != null 
+//         && a != '' && b != '' && a.length < 50) {
+//         console.log('ok')
+//         appData.expenses[a] = b;
+//     } else {
+//         continue;
+//     }
+//     i++;
+// }
+// while (i < 2);
 
 appData.moneyPerDay = money/30;
 
