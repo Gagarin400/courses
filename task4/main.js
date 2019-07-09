@@ -78,18 +78,9 @@ let appData = {
             chooseIncomeOther();
         }else {
             appData.chooseIncome();
+            return;
         }
 
-        function chooseIncomeOther() {
-            let incomeOther = (prompt('Может что-то еще?'));
-            if (typeof(incomeOther) === 'string' && typeof(incomeOther) != null
-            && incomeOther != '') {
-                appData.income.push(incomeOther);
-            }
-            else {
-                appData.chooseIncome(chooseIncomeOther());
-            }
-        }
         let allIncome = [];
         appData.income.forEach(function(item, i) {
             i = i + 1;
@@ -100,11 +91,23 @@ let appData = {
         appData.income.sort();
     }
 };
-for (let key in appData) {
-    console.log("Наша программа включает в себя данные: " + key + " - " + appData[key]);
+
+function chooseIncomeOther() {
+    let incomeOther = (prompt('Может что-то еще?'));
+    if (typeof(incomeOther) === 'string' && typeof(incomeOther) != null
+    && incomeOther != '') {
+        appData.income.push(incomeOther);
+    }
+    else {
+        chooseIncomeOther();
+        return;
+    }
 }
+// for (let key in appData) {
+//     console.log("Наша программа включает в себя данные: " + key + " - " + appData[key]);
+// }
 // appData.chooseExpensise();
 // appData.detectDayBudget();
 // appData.checkSavings();
 // appData.chooseOptExpenses();
-// appData.chooseIncome();
+appData.chooseIncome();
