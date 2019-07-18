@@ -1,0 +1,23 @@
+ul {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 65%;
+}
+li {
+    list-style-type: none;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 7%;
+    background: grey;
+    margin: 0 10px 20px 0;
+}
+li a {
+    text-decoration: none;
+    color: white;
+}
+li:hover {
+  background: blue;
+  cursor: pointer;  
+}
